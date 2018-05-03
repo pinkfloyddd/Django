@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<title> this is novel info tables</title>
+{% for novelinfo in novelinfos %}
+<tr>
+    <td> {{ novelinfo.name }}</td>
+    <td> {{ novelinfo.writter }}</td>
+    <td> {{ novelinfo.pub }}</td>
+    <td> {{ novelinfo.pub_date }}</td>
+    <td> {{ novelinfo.rating }}</td>
+    <td> {{ novelinfo.rating_nums }}</td>
+</tr>
+{% endfor %}
+</body>
+</html>

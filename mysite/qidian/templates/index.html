@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>小说索引</title>
+</head>
+<body>
+<table>
+    <thead>
+    <tr>
+        <th>小说名</th>
+        <th>作者</th>
+        <th>类型</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for novel_info in novel_info_table %}
+    <tr>
+        <td>{{ novel_info.novel_name }}</td>
+        <td>{{ novel_info.novel_writter }}</td>
+        <td>{{ novel_info.novel_main_type }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+<table>
+    <thead>
+    <tr>
+        <th>小说名</th>
+        <th>章节名</th>
+        <th>章节内容</th>
+    </tr>
+    </thead>
+    <tbody>
+    {% for chapter in chapter_detail_table %}
+    <tr>
+        <td>{{ chapter.novel_name }}</td>
+        <td>{{ chapter.novel_chapter_name }}</td>
+        <td>{{ chapter.novel_chapter_context }}</td>
+    </tr>
+    {% endfor %}
+    </tbody>
+</table>
+</body>
+</html>
